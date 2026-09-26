@@ -1345,7 +1345,7 @@
         }
     }
 
-    /* Mural animais - Botão Ver Mais */
+    /* Mural animais - Botão Azul Ver Mais */
 
     .ver-mais-wrapper {
         display: flex;
@@ -1372,7 +1372,7 @@
         color: var(--branco);
     }
 
-    /* Mural animais - Botão rosa */
+    /* Mural animais - Botão rosa Ver Mais */
 
     .lost-section .btn-ver-mais {
         background: transparent;
@@ -1933,4 +1933,82 @@
 
 .tipo-conteudo {
     color: var(--azul-escuro);
+}
+
+/* ===== TEMA ROSA - SÓ NA PÁGINA ANIMAIS PROCURADOS ===== */
+body.pagina-procurados {
+    --azul-principal: #E9166B;
+    --azul-escuro:    #C9125D;
+    --azul-claro:     #FDE4EF;
+    --fundo-azul:     #FDE4EF;
+}
+
+/* Mantém a caixa de busca azul, como estava */
+body.pagina-procurados .search-box {
+    background: #1489D8;
+}
+
+body.pagina-procurados .btn-lost {
+    color: #1489D8;
+}
+
+body.pagina-procurados .btn-lost:hover {
+    background: #F2F2F2;
+}
+
+/* ===== HERO EM DUAS COLUNAS - PROCURADOS E ENCONTRADOS ===== */
+
+body.pagina-procurados .hero-content,
+body.pagina-encontrados .hero-content {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    text-align: left;
+}
+
+/* Texto à esquerda */
+body.pagina-procurados .hero-texto,
+body.pagina-encontrados .hero-texto {
+    flex: 1;
+}
+
+body.pagina-procurados .hero h1,
+body.pagina-encontrados .hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+body.pagina-procurados .hero p,
+body.pagina-encontrados .hero p {
+    max-width: 420px;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Busca à direita */
+body.pagina-procurados .search-box,
+body.pagina-encontrados .search-box {
+    flex-shrink: 0;
+    width: 340px;
+}
+
+/* Responsivo - empilha no celular */
+@media (max-width: 800px) {
+    body.pagina-procurados .hero-content,
+    body.pagina-encontrados .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    body.pagina-procurados .hero p,
+    body.pagina-encontrados .hero p {
+        margin: 0 auto;
+    }
+    body.pagina-procurados .hero h1,
+    body.pagina-encontrados .hero h1 {
+        font-size: 38px;
+    }
 }
