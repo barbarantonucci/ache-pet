@@ -1935,3 +1935,92 @@
 .tipo-conteudo {
     color: var(--azul-escuro);
 }
+
+/* =========================================================
+   HERO EM DUAS COLUNAS - PROCURADOS E ENCONTRADOS
+   ========================================================= */
+
+body.pagina-procurados .hero-content,
+body.pagina-encontrados .hero-content {
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    text-align: left;
+}
+
+/* Texto à esquerda */
+body.pagina-procurados .hero-texto,
+body.pagina-encontrados .hero-texto {
+    flex: 1;
+}
+
+body.pagina-procurados .hero h1,
+body.pagina-encontrados .hero h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+body.pagina-procurados .hero p,
+body.pagina-encontrados .hero p {
+    max-width: 420px;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* Busca à direita */
+body.pagina-procurados .search-box,
+body.pagina-encontrados .search-box {
+    flex-shrink: 0;
+    width: 340px;
+}
+
+/* =========================================================
+   CORES - PROCURADOS (ROSA)
+   ========================================================= */
+
+body.pagina-procurados .hero {
+    background: #FDE4EF;
+}
+
+body.pagina-procurados .hero h1 {
+    color: #E9166B;
+}
+
+/* =========================================================
+   CORES - ENCONTRADOS (AZUL)
+   ========================================================= */
+
+body.pagina-encontrados .hero {
+    background: #DFF2FD;
+}
+
+body.pagina-encontrados .hero h1 {
+    color: #1489D8;
+}
+
+/* =========================================================
+   RESPONSIVO - EMPILHA NO CELULAR
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    body.pagina-procurados .hero-content,
+    body.pagina-encontrados .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    body.pagina-procurados .hero p,
+    body.pagina-encontrados .hero p {
+        margin: 0 auto;
+    }
+
+    body.pagina-procurados .hero h1,
+    body.pagina-encontrados .hero h1 {
+        font-size: 38px;
+    }
+}
