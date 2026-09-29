@@ -15,14 +15,20 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header class="site-header">
 
         <div class="header-container">
             <a href="tela-inicial.html" class="logo">
                 <img src="Media/Logo-imagem.png" alt="AchePet">
+                <span>
+                    <span class="logo-ache">Ache</span><span class="logo-pet">Pet</span>
             </a>
+
             <nav class="main-nav">
+
+                <a href="tela-inicial.html" class="active">INÍCIO</a>
 
                 <a href="login.html">LOGIN</a>
 
@@ -30,21 +36,21 @@
 
                 <div class="nav-dropdown">
 
-                <a href="#" class="nav-dropdown-link">MURAL</a>
+                    <a href="#" class="nav-dropdown-link">MURAL</a>
 
-                <div class="nav-dropdown-menu">
+                    <div class="nav-dropdown-menu">
 
-                    <a href="mural-procurados.html" class="menu-procurados">
-                        Animais Procurados
-                    </a>
+                        <a href="mural-procurados.html" class="menu-procurados">
+                            Animais Procurados
+                        </a>
 
-                    <a href="mural-encontrados.html" class="menu-encontrados">
-                        Animais Encontrados
-                    </a>
+                        <a href="mural-encontrados.html" class="menu-encontrados">
+                            Animais Encontrados
+                        </a>
+
+                    </div>
 
                 </div>
-
-            </div>
 
                 <a href="quem-somos.html">QUEM SOMOS?</a>
 
@@ -59,67 +65,68 @@
     </header>
 
     <container id="formulario-container">
-            
-            
 
-            <div class="formulario-enunciado">
 
-                <img src="Media/patinha-rosa.png" id="patinha-rosa">
-            
 
-                <div class="formulario-enunciado-texto">
+        <div class="formulario-enunciado">
 
-                    <h1>Cadastrar seu animal</h1>
-                    
-                    <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
+            <img src="Media/patinha-rosa.png" id="patinha-rosa">
 
-                </div>
+
+            <div class="formulario-enunciado-texto">
+
+                <h1>Cadastrar seu animal</h1>
+
+                <p>Cadastre um animal perdido ou encontrado e ajude a conectá-lo novamente à sua família.</p>
 
             </div>
 
-            <div class="formulario-selecao formulario-fotos">
-                <div class="titulo-situacao">
-                    Informações do animal
-                </div>
+        </div>
 
-                <div class="area-fotos">
+        <div class="formulario-selecao formulario-fotos">
+            <div class="titulo-situacao">
+                Informações do animal
+            </div>
 
-                        <input type="file" id="foto" hidden>
+            <div class="area-fotos">
 
-                        <label for="foto" class="botao-arquivo">
+                <input type="file" id="foto" hidden>
 
-                            <img src="Media/icon-imagem.png" id="icon-imagem">
-                            
-                            <p><strong>Solte as fotos do animal aqui ou<br>
+                <label for="foto" class="botao-arquivo">
+
+                    <img src="Media/icon-imagem.png" id="icon-imagem">
+
+                    <p><strong>Solte as fotos do animal aqui ou<br>
                             clique aqui para selecionar</strong>
-                            <span>Máximo de 5 fotos</span></p>
+                        <span>Máximo de 5 fotos</span>
+                    </p>
 
-                        </label>
+                </label>
 
-                        
 
-                        <div class="fotos-selecionadas">
 
-                            <div class="foto-preview"></div>
-                            <div class="foto-preview"></div>
-                            <div class="foto-preview"></div>
-                            <div class="foto-preview"></div>
-                            <div class="foto-preview"></div>
+                <div class="fotos-selecionadas">
 
-                        </div>
-                        </div>
+                    <div class="foto-preview"></div>
+                    <div class="foto-preview"></div>
+                    <div class="foto-preview"></div>
+                    <div class="foto-preview"></div>
+                    <div class="foto-preview"></div>
+
+                </div>
+            </div>
 
             <div id="btn-formulario">
                 <a href="form3.html" id="btn-formulario1">Anterior</a>
                 <a href="tela-inicial.html" id="btn-formulario2">Finalizar</a>
             </div>
 
-            </div>
+        </div>
 
 
 
     </container>
-      
+
     <footer class="site-footer">
 
         <div class="footer-content">
@@ -162,6 +169,7 @@
         </div>
 
     </footer>
-  
+
 </body>
+
 </html>
