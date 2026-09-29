@@ -1413,6 +1413,7 @@ body {
 .formulario-enunciado-texto {
     align-items: center;
     text-align: left;
+    color: #E9166B;
 }
 
 .formulario-enunciado-texto h1 {
@@ -2072,3 +2073,515 @@ body.pagina-encontrados .hero h1 {
         font-size: 38px;
     }
 }
+
+a {
+            text-decoration: none;
+        }
+
+        #formulario-container {
+        width: 100%;
+        min-height: calc(100vh - 75px);
+        
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        background-color: var(--azul-claro);
+    }
+
+    /* Título */
+
+    .formulario-enunciado {
+        width: 800px;
+        max-width: 95%;
+
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 12px;
+    }
+
+    #patinha-rosa {
+        width: 75px;
+        height: auto;
+        margin-right: 12px;
+    }
+
+    .formulario-enunciado-texto h1 {
+        color: var(--rosa);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 2px;
+    }
+
+    .formulario-enunciado-texto p {
+        color: var(--rosa);
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+
+    /* Caixa branca */
+
+    .formulario-selecao {
+        width: 800px;
+        max-width: 95%;
+
+        background-color: #fff;
+
+        border-radius: 10px;
+
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.20);
+
+        overflow: hidden;
+
+        padding-bottom: 8px;
+    }
+
+
+    /* Título azul */
+
+    .titulo-situacao {
+        width: 100%;
+
+        background-color: var(--azul-escuro);
+        color: white;
+
+        padding: 7px 35px;
+
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+
+    /* Campos */
+
+    .formulario-cadastro {
+        padding: 28px 65px 20px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        column-gap: 10px;
+        row-gap: 22px;
+    }
+
+    .campo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo label {
+        color: var(--azul-escuro);
+
+        font-size: 11px;
+        font-weight: 600;
+
+        margin-bottom: 3px;
+    }
+
+
+    /* Inputs e selects */
+
+    .campo input,
+    .campo select {
+        width: 100%;
+        height: 34px;
+
+        border: 2px solid var(--azul-principal);
+        border-radius: 9px;
+
+        background-color: var(--azul-claro);
+
+        outline: none;
+
+        padding: 0 10px;
+
+        color: var(--azul-escuro);
+
+        font-size: 11px;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .campo input::placeholder {
+        color: #7aa7c5;
+        font-size: 10px;
+    }
+
+    .campo input:focus,
+    .campo select:focus {
+        border-color: var(--rosa);
+    }
+
+
+    /* Sexo */
+
+    .opcoes-sexo {
+        height: 32px;
+
+        display: flex;
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .opcoes-sexo label {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        gap: 3px;
+
+        margin: 0;
+
+        color: var(--azul-escuro);
+
+        font-size: 10px;
+        font-weight: 500;
+
+        white-space: nowrap;
+    }
+
+    .opcoes-sexo input[type="radio"] {
+        width: 12px;
+        height: 12px;
+
+        margin: 0;
+
+        accent-color: var(--azul-principal);
+    }
+
+
+    /* Organização dos campos */
+
+    /* Nome | Espécie | Idade */
+
+    .formulario-cadastro .campo:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .formulario-cadastro .campo:nth-child(2) {
+        grid-column: 2;
+    }
+
+    .formulario-cadastro .campo:nth-child(3) {
+        grid-column: 3;
+    }
+
+
+    /* Sexo | Raça | Porte */
+
+    .formulario-cadastro .campo:nth-child(4) {
+        grid-column: 1;
+    }
+
+    .formulario-cadastro .campo:nth-child(5) {
+        grid-column: 2;
+    }
+
+    .formulario-cadastro .campo:nth-child(6) {
+        grid-column: 3;
+    }
+
+
+    /* Cor | Características */
+
+    .campo-cor {
+        grid-column: 1;
+    }
+
+    .campo-caracteristicas {
+        grid-column: 2 / 4;
+    }
+
+
+    /* Botões */
+
+    #btn-formulario {
+        width: 100%;
+
+        padding: 12px 7px 0;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #btn-formulario a {
+        height: 34px;
+
+        padding: 0 32px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 9px;
+
+        text-decoration: none;
+
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+
+    /* Anterior */
+
+    #btn-formulario1 {
+        color: var(--azul-principal);
+
+        background-color: white;
+
+        border: 2px solid var(--azul-principal);
+    }
+
+
+    /* Prosseguir */
+
+    #btn-formulario2 {
+        color: white;
+
+        background-color: var(--azul-escuro);
+
+        border: 2px solid var(--azul-escuro);
+    }
+
+
+/* Caixa principal */
+.formulario-fotos {
+    width: 800px;
+    height: 450px;
+
+    background-color: var(--branco);
+
+    border: 2px solid var(--azul-escuro);
+    border-radius: 10px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+
+    padding-bottom: 0;
+}
+
+
+/* Título azul */
+.formulario-fotos .titulo-situacao {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 7px 35px;
+
+    background-color: var(--azul-escuro);
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ÁREA DAS FOTOS
+========================================= */
+
+.area-fotos {
+    width: 100%;
+    height: 310px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* Área grande para selecionar */
+.botao-arquivo {
+    width: 320px;
+    height: 180px;
+
+    flex-shrink: 0;
+
+    background-color: var(--azul-claro);
+
+    border: 2px solid var(--azul-principal);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+
+/* Ícone */
+#icon-imagem {
+    width: 25px;
+    height: 25px;
+
+    object-fit: contain;
+
+    margin-bottom: 6px;
+}
+
+
+/* Texto */
+.botao-arquivo p {
+    margin: 0;
+
+    color: var(--azul-escuro);
+
+    font-family: var(--fonte-poppins);
+
+    font-size: 12px;
+    line-height: 1.25;
+}
+
+.botao-arquivo p span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   MINIATURAS
+========================================= */
+
+.fotos-selecionadas {
+    width: 300px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 66px);
+    grid-template-rows: repeat(2, 66px);
+
+    gap: 15px;
+
+    justify-content: center;
+    align-content: center;
+}
+
+/* Miniatura */
+.foto-preview {
+    width: 66px;
+    height: 66px;
+
+    position: relative;
+
+    background-color: var(--azul-claro);
+
+    border: 2px solid var(--azul-principal);
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    background-image: url("Media/icon-imagem.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+}
+
+
+/* X */
+.foto-preview::after {
+    content: "×";
+
+    position: absolute;
+
+    top: -8px;
+    right: -7px;
+
+    width: 16px;
+    height: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    color: var(--azul-principal);
+
+    border: 1px solid var(--azul-principal);
+    border-radius: 50%;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.formulario-fotos #btn-formulario {
+    width: 100%;
+
+    padding: 0 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    margin: 0;
+}
+
+.formulario-fotos #btn-formulario a {
+    height: 34px;
+
+    padding: 0 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    box-sizing: border-box;
+}
+
+.formulario-situacao {
+    color: var(--azul-escuro)
+}
+
+#encontrado  input[type="radio"] {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+    }
+
+ #perdido  input[type="radio"] {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+    }
