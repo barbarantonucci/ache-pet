@@ -11,12 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Mural Animais Encontrados</title>
+    <title>Mural Animais Encontrados | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="pagina-encontrados">
+<body class="pagina-encontrados" data-page="mural-encontrados">
 
     <header class="site-header">
         <div class="header-container">
@@ -59,161 +60,70 @@
         <div class="hero-content">
             <div class="hero-texto">
                 <h1>Animais Encontrados</h1>
-                <p>Ajude a reconhcer os pets da sua região.</p>
+                <p>Ajude a reconhecer os pets da sua região.</p>
             </div>
 
             <div class="search-box">
                 <div class="search-input">
                     <span class="search-icon">⌖</span>
-                    <input type="text" id="cidadeBusca" placeholder="busca por cidade">
+                    <input type="text" id="cidadeBusca" placeholder="busca por cidade" autocomplete="off">
                 </div>
                 <div class="search-buttons">
-                    <button class="btn-lost" id="btnPerdi">FILTROS</button>
-                    <button class="btn-found" id="btnEncontrei">BUSCAR</button>
+                    <button type="button" class="btn-lost" id="btnFiltros">FILTROS</button>
+                    <button type="button" class="btn-found" id="btnBuscar">BUSCAR</button>
                 </div>
             </div>
         </div>
 
     </section>
 
+
+    <!-- FILTROS -->
+    <section class="filtros-panel" id="filtrosPanel" hidden>
+        <div class="filtros-grid">
+
+            <fieldset class="filtro-grupo">
+                <legend>Espécie</legend>
+                <label><input type="radio" name="especie" value="Cachorro"> Cachorro</label>
+                <label><input type="radio" name="especie" value="Gato"> Gato</label>
+                <label><input type="radio" name="especie" value="Ave"> Ave</label>
+                <label><input type="radio" name="especie" value="Outros"> Outros</label>
+            </fieldset>
+
+            <fieldset class="filtro-grupo">
+                <legend>Sexo</legend>
+                <label><input type="radio" name="sexo" value="macho"> Macho</label>
+                <label><input type="radio" name="sexo" value="femea"> Fêmea</label>
+                <label><input type="radio" name="sexo" value="nao-identificado"> Não identificado</label>
+            </fieldset>
+
+            <fieldset class="filtro-grupo">
+                <legend>Porte</legend>
+                <label><input type="radio" name="porte" value="Pequeno"> Pequeno</label>
+                <label><input type="radio" name="porte" value="Médio"> Médio</label>
+                <label><input type="radio" name="porte" value="Grande"> Grande</label>
+            </fieldset>
+
+            <fieldset class="filtro-grupo">
+                <legend>Cor</legend>
+                <input type="text" id="filtroCor" name="cor" placeholder="Ex.: preto, caramelo" maxlength="30">
+            </fieldset>
+
+        </div>
+        <div class="filtros-acoes">
+            <button type="button" class="filtro-btn filtro-limpar" id="btnLimparFiltros">Limpar</button>
+            <button type="button" class="filtro-btn filtro-aplicar" id="btnAplicarFiltros">Aplicar filtros</button>
+        </div>
+    </section>
+
     <!-- MURAL DE ANIMAIS ENCONTRADOS -->
     <section class="pets-section found-section">
         <div class="section-container">
 
-            <div class="pets-grid">
+            <div class="pets-grid" id="petsGrid" data-status="encontrado" data-limite="12"></div>
 
-                <!-- PET 1 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Outros/Coelho 1.jpg" alt="Coelho encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Nick</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 02/08/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 2 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Outros/Coelho 2.jpg" alt="Coelho encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Lili</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 27/12/2025</p>
-                    </div>
-                </article>
-
-                <!-- PET 3 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Gato/Gato 6.png" alt="Gato encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Amora</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 07/08/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 4 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Gato/Gato 7.jpg" alt="Gato encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Bob</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 18/09/2025</p>
-                    </div>
-                </article>
-
-                <!-- PET 5 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Gato/Gato 8.jpg" alt="Gato encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Edu</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 19/06/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 6 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 6.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Eddie</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 11/06/2025</p>
-                    </div>
-                </article>
-
-                <!-- PET 7 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 7.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Susie</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 24/04/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 8 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 8.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Nina</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 30/08/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 9 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 9.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Cacau</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 04/05/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 10 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 10.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Nick</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 15/05/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 11 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 11.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Kaka</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 03/10/2026</p>
-                    </div>
-                </article>
-
-                <!-- PET 12 -->
-                <article class="pet-card">
-                    <img src="Media/Animais Encontrados/Cachorro/Cachorro 12.jpg" alt="Cachorro encontrado">
-                    <span class="pet-status found">ENCONTRADO</span>
-                    <div class="pet-info">
-                        <h3>Beth</h3>
-                        <p>📌 São Paulo, SP</p>
-                        <p>📅 26/09/2026</p>
-                    </div>
-                </article>
-
+            <div class="ver-mais-wrapper" id="carregarMaisWrapper" hidden>
+                <button type="button" class="btn-ver-mais" id="btnCarregarMais">CARREGAR MAIS</button>
             </div>
         </div>
 
@@ -221,38 +131,40 @@
 
     <footer class="site-footer">
         <div class="footer-content">
-            <div class="footer-content">
 
-                <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
 
-                <nav class="footer-links">
+            <nav class="footer-links">
 
-                    <a href="#">
-                        <img src="Media/icon-contato.png"> Contato
-                    </a>
+                <a href="#">
+                    <img src="Media/icon-contato.png"> Contato
+                </a>
 
-                    <a href="index.html#quem-somos">
-                        <img src="Media/icon-quemsomos.png"> Quem somos?
-                    </a>
+                <a href="tela-inicial.html#quem-somos">
+                    <img src="Media/icon-quemsomos.png"> Quem somos?
+                </a>
 
-                    <a href="index.html#mural">
-                        <img src="Media/icon-mural.png"> Mural de Pets
-                    </a>
+                <a href="tela-inicial.html#mural">
+                    <img src="Media/icon-mural.png"> Mural de Pets
+                </a>
 
-                    <a href="login.html">
-                        <img src="Media/icon-entrar.png"> Entrar
-                    </a>
+                <a href="login.html">
+                    <img src="Media/icon-entrar.png"> Entrar
+                </a>
 
-                </nav>
+            </nav>
 
-            </div>
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
             <div class="footer-divider"></div>
-            <p class="footer-message"><span>♡</span> Lorem Ipsum dolor</p>
+            <p class="footer-message"><span>♡</span> Juntos por eles</p>
         </div>
     </footer>
 
+    <script src="script.js"></script>
+
 </body>
+
+</html>

@@ -13,10 +13,11 @@
 
     <title>LOGIN | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="login">
 
     <!-- HEADER -->
     <header class="site-header">
@@ -26,6 +27,7 @@
                 <img src="Media/Logo-imagem.png" alt="AchePet">
                 <span>
                     <span class="logo-ache">Ache</span><span class="logo-pet">Pet</span>
+                </span>
             </a>
             <nav class="main-nav">
                 <a href="tela-inicial.html">INÍCIO</a>
@@ -76,9 +78,11 @@
                             <!-- CAMPOS DE LOGIN -->
                             <div>
 
-                                <input class="teno" type="email" placeholder="Digite seu email">
+                                <input class="teno" type="email" id="loginEmail" placeholder="Digite seu e-mail"
+                                    autocomplete="email">
 
-                                <input class="teno" type="password" placeholder="Digite sua senha">
+                                <input class="teno" type="password" id="loginSenha" placeholder="Digite sua senha"
+                                    autocomplete="current-password">
 
                                 <button id="teno-button" type="button">
                                     ENTRAR
@@ -130,11 +134,11 @@
                     <img src="Media/icon-contato.png"> Contato
                 </a>
 
-                <a href="index.html#quem-somos">
+                <a href="tela-inicial.html#quem-somos">
                     <img src="Media/icon-quemsomos.png"> Quem somos?
                 </a>
 
-                <a href="index.html#mural">
+                <a href="tela-inicial.html#mural">
                     <img src="Media/icon-mural.png"> Mural de Pets
                 </a>
 
@@ -146,24 +150,23 @@
 
         </div>
 
-        </div>
-
-
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 

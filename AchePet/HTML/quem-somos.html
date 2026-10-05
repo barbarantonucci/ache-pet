@@ -14,10 +14,11 @@
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
+  <script src="tema.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="quem-somos">
 
   <!-- HEADER -->
 
@@ -75,7 +76,7 @@
         <div class="quem-somos-content">
 
           <span class="quem-somos-label">
-            SOBRE O ACHÉPET
+            SOBRE O ACHEPET
           </span>
 
           <h1>
@@ -272,7 +273,7 @@
         em um reencontro.
       </p>
 
-      <a href="cadastro.html" class="botao">
+      <a href="form1.html" class="botao">
         CADASTRAR ANIMAL
       </a>
 
@@ -297,11 +298,11 @@
           <img src="Media/icon-contato.png"> Contato
         </a>
 
-        <a href="index.html#quem-somos">
+        <a href="tela-inicial.html#quem-somos">
           <img src="Media/icon-quemsomos.png"> Quem somos?
         </a>
 
-        <a href="index.html#mural">
+        <a href="tela-inicial.html#mural">
           <img src="Media/icon-mural.png"> Mural de Pets
         </a>
 
@@ -334,24 +335,9 @@
 
     </div>
 
-    </div>
-
   </footer>
 
-
-  <!-- JAVASCRIPT -->
-
-  <script>
-
-    const themeToggle = document.querySelector('.theme-toggle');
-
-    themeToggle.addEventListener('click', function () {
-
-      this.classList.toggle('active');
-
-    });
-
-  </script>
+  <script src="script.js"></script>
 
 </body>
 

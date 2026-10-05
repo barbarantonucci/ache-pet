@@ -13,10 +13,11 @@
 
     <title>Situação | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="form2">
     <header class="site-header">
 
         <div class="header-container">
@@ -83,7 +84,7 @@
 
         </div>
 
-        <div class="formulario-selecao">
+        <div class="formulario-selecao formulario-info">
             <div class="titulo-situacao">
                 Informações do animal
             </div>
@@ -91,13 +92,13 @@
             <div class="formulario-cadastro">
 
                 <div class="campo">
-                    <label for="nome">Nome do Animal:</label>
+                    <label for="nome">Nome do Animal: <small>(se souber)</small></label>
                     <input type="text" name="nome" id="nome" placeholder="Digite o nome do animal">
                 </div>
 
 
                 <div class="campo">
-                    <label for="especie">Espécie:</label>
+                    <label for="especie">Espécie: *</label>
                     <select id="especie">
                         <option value="">Selecione a espécie:</option>
                         <option value="Gato">Gato</option>
@@ -114,7 +115,7 @@
                 </div>
 
                 <div class="campo campo-sexo">
-                    <label>Sexo</label>
+                    <label>Sexo *</label>
 
                     <div class="opcoes-sexo">
 
@@ -137,8 +138,8 @@
                 </div>
 
                 <div class="campo">
-                    <label for="lista-raca">Raça:</label>
-                    <input type="text" id="raca" name="lista-raca" list="raca">
+                    <label for="raca">Raça:</label>
+                    <input type="text" id="raca" name="raca" list="lista-raca" maxlength="60" autocomplete="off">
 
                     <datalist id="lista-raca">
                         <option value="Pug">Pug</option>
@@ -226,7 +227,52 @@
                 <div class="campo campo-caracteristicas">
                     <label for="caracteristicas">Características:</label>
                     <input type="text" name="caracteristicas" id="caracteristicas"
-                        placeholder="Digite as Características do Animal">
+                        placeholder="Digite as Características do Animal" maxlength="600">
+                </div>
+
+                <div class="campo campo-cidade">
+                    <label for="cidade">Cidade onde foi visto: *</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite a cidade" maxlength="80"
+                        autocomplete="address-level2">
+                </div>
+
+                <div class="campo campo-uf">
+                    <label for="uf">Estado: *</label>
+                    <select id="uf" name="uf">
+                        <option value="">Selecione:</option>
+                        <option value="AC">AC</option>
+                        <option value="AL">AL</option>
+                        <option value="AP">AP</option>
+                        <option value="AM">AM</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="ES">ES</option>
+                        <option value="GO">GO</option>
+                        <option value="MA">MA</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                        <option value="MG">MG</option>
+                        <option value="PA">PA</option>
+                        <option value="PB">PB</option>
+                        <option value="PR">PR</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RJ">RJ</option>
+                        <option value="RN">RN</option>
+                        <option value="RS">RS</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="SC">SC</option>
+                        <option value="SP">SP</option>
+                        <option value="SE">SE</option>
+                        <option value="TO">TO</option>
+                    </select>
+                </div>
+
+                <div class="campo campo-data">
+                    <label for="data" id="labelData">Data: *</label>
+                    <input type="date" name="data" id="data">
                 </div>
 
 
@@ -275,18 +321,20 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

@@ -13,10 +13,11 @@
 
     <title>Situação | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="form3">
     <header class="site-header">
 
         <div class="header-container">
@@ -24,6 +25,7 @@
                 <img src="Media/Logo-imagem.png" alt="AchePet">
                 <span>
                     <span class="logo-ache">Ache</span><span class="logo-pet">Pet</span>
+                </span>
             </a>
 
             <nav class="main-nav">
@@ -90,7 +92,7 @@
 
             <div class="area-fotos">
 
-                <input type="file" id="foto" hidden>
+                <input type="file" id="foto" accept="image/jpeg,image/png,image/webp" multiple hidden>
 
                 <label for="foto" class="botao-arquivo">
 
@@ -157,18 +159,20 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

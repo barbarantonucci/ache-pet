@@ -11,23 +11,25 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>ESQUECEU-SENHA2 | AchePet 🐾</title>
+    <title>Confirmar código | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="esqueci2">
 
-    <!-- HEADER -->
     <header class="site-header">
 
         <div class="header-container">
+
             <a href="tela-inicial.html" class="logo">
                 <img src="Media/Logo-imagem.png" alt="AchePet">
                 <span>
                     <span class="logo-ache">Ache</span><span class="logo-pet">Pet</span>
                 </span>
             </a>
+
             <nav class="main-nav">
 
                 <a href="tela-inicial.html">INÍCIO</a>
@@ -54,26 +56,19 @@
 
                 </div>
 
-                <a href="quem-somos.html">QUEM SOMOS?</a>
+                <a href="quem-somos.html">QUEM SOMOS</a>
 
             </nav>
 
-        </div>
-
-        <a href="#quem-somos">QUEM SOMOS?</a>
-
-        </nav>
-
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-            <span></span>
-        </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+                <span></span>
+            </button>
 
         </div>
 
     </header>
 
 
-    <!-- ÁREA DO LOGIN -->
     <main>
 
         <section class="cadastro-section">
@@ -88,15 +83,14 @@
 
                             <div>
                                 <p>
-                                    DIGITE O CÓDIGO <br>DE 6 DIGITOS ENVIADO PARA O SEU EMAIL
+                                    DIGITE O CÓDIGO <br>DE 6 DÍGITOS ENVIADO PARA O SEU E-MAIL
                                 </p>
 
                                 <br>
 
-                                <input type="number" placeholder="codigo">
-
+                                <input type="text" id="codigo" inputmode="numeric" maxlength="6" placeholder="código"
+                                    autocomplete="one-time-code">
                             </div>
-
 
                             <div>
                                 <br>
@@ -107,20 +101,15 @@
                                     CLIQUE AQUI:
                                 </p>
 
-                                <button id="note-button">
-                                    <a href="esqueceu-senha.html">REENVIAR CÓDIGO</a>
-                                </button>
-
+                                <button type="button" id="note-button">REENVIAR CÓDIGO</button>
                             </div>
 
                         </div>
 
                     </div>
 
-                    <button class="cadastro-button">
-
-                        <a href="esqueceu-senha3.html">CONFIRMAR CÓDIGO</a>
-
+                    <button type="button" class="cadastro-button" id="btnConfirmarCodigo">
+                        CONFIRMAR CÓDIGO
                     </button>
 
                 </div>
@@ -128,59 +117,56 @@
 
         </section>
 
-
         <!-- FAIXA ROSA -->
         <section class="cadastro-pink-section">
         </section>
 
-
-        </section>
-
     </main>
 
+    <footer class="site-footer">
 
-    <!-- FOOTER -->
-    <div class="footer-content">
+        <div class="footer-content">
 
-        <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+            <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
 
-        <nav class="footer-links">
+            <nav class="footer-links">
 
-            <a href="#">
-                <img src="Media/icon-contato.png"> Contato
-            </a>
+                <a href="#">
+                    <img src="Media/icon-contato.png"> Contato
+                </a>
 
-            <a href="tela-inicial.html#quem-somos">
-                <img src="Media/icon-quemsomos.png"> Quem somos?
-            </a>
+                <a href="quem-somos.html">
+                    <img src="Media/icon-quemsomos.png"> Quem somos?
+                </a>
 
-            <a href="tela-inicial.html#mural">
-                <img src="Media/icon-mural.png"> Mural de Pets
-            </a>
+                <a href="tela-inicial.html#mural">
+                    <img src="Media/icon-mural.png"> Mural de Pets
+                </a>
 
-            <a href="login.html">
-                <img src="Media/icon-entrar.png"> Entrar
-            </a>
+                <a href="login.html">
+                    <img src="Media/icon-entrar.png"> Entrar
+                </a>
 
-        </nav>
+            </nav>
 
-    </div>
+        </div>
 
-    <div class="footer-bottom">
+        <div class="footer-bottom">
 
-        <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
-        <div class="footer-divider"></div>
+            <div class="footer-divider"></div>
 
-        <p class="footer-message">
-            <span>♡</span>
-            Lorem Ipsum dolor
-        </p>
+            <p class="footer-message">
+                <span>♡</span>
+                Juntos por eles
+            </p>
 
-    </div>
+        </div>
 
     </footer>
 
+    <script src="script.js"></script>
 
 </body>
 

@@ -11,12 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Eu encontrei | AchePet 🐾</title>
+    <title>Animal encontrado | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="detalhe">
 
     <header class="site-header">
 
@@ -55,7 +56,7 @@
 
                 </div>
 
-                <a href="quem-somos.html">QUEM SOMOS?</a>
+                <a href="quem-somos.html">QUEM SOMOS</a>
 
             </nav>
 
@@ -68,57 +69,45 @@
     </header>
 
 
-    <container id="formulario-container">
+    <main class="detalhe-page encontrado" data-tipo="encontrado">
 
-        <!-- NOVO: ÁREA PRINCIPAL DO "EU ENCONTREI" -->
-        <div class="animal-encontrado">
+        <section class="detalhe-container" id="animalDetalhe" aria-live="polite">
 
-            <!-- NOVO: IMAGEM DO ANIMAL -->
-            <div class="animal-encontrado-imagem">
-
-                <img src="Media/cachorro.jpg" alt="Animal encontrado">
-
+            <div class="detalhe-voltar">
+                <a href="mural-encontrados.html">← Voltar ao mural</a>
             </div>
 
+            <div class="animal-detalhe">
 
-            <!-- NOVO: ÁREA DAS INFORMAÇÕES DO ANIMAL -->
-            <div class="animal-encontrado-informacoes">
-
-                <!-- NOVO: NOME E IDADE DO ANIMAL -->
-                <h2>nome do animal, idade</h2>
-
-                <!-- NOVO: CAIXA COM AS INFORMAÇÕES -->
-                <div class="animal-encontrado-texto">
-
-                    <p>
-                        Informações<br>
-                        do animal
-                    </p>
-
+                <div class="animal-detalhe-imagem">
+                    <img id="animalFoto" src="" alt="Foto do animal">
+                    <div class="animal-miniaturas" id="animalMiniaturas"></div>
                 </div>
 
+                <div class="animal-detalhe-informacoes">
 
-                <!-- NOVO: BOTÃO "EU ENCONTREI" -->
-                <div class="animal-encontrado-botao">
+                    <span class="pet-status" id="animalStatus"></span>
 
-                    <a href="entrar-em-contato.html">
-                        eu encontrei
-                    </a>
+                    <h2 id="animalTitulo">Carregando…</h2>
+
+                    <div class="animal-detalhe-texto">
+                        <ul id="animalInfo"></ul>
+                        <p id="animalDescricao"></p>
+                    </div>
+
+                    <div class="animal-detalhe-botao">
+                        <a href="#" id="btnContato">É O MEU ANIMAL</a>
+                    </div>
+
+                    <p class="detalhe-aviso" id="detalheAviso"></p>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-
-        <div class="formulario-enunciado">
-
-        </div>
-
-
-    </container>
-
+    </main>
 
     <footer class="site-footer">
 
@@ -132,11 +121,11 @@
                     <img src="Media/icon-contato.png"> Contato
                 </a>
 
-                <a href="index.html#quem-somos">
+                <a href="quem-somos.html">
                     <img src="Media/icon-quemsomos.png"> Quem somos?
                 </a>
 
-                <a href="index.html#mural">
+                <a href="tela-inicial.html#mural">
                     <img src="Media/icon-mural.png"> Mural de Pets
                 </a>
 
@@ -150,18 +139,20 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

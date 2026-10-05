@@ -11,12 +11,13 @@
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <title>Entrar em contato | AchePet 🐾</title>
+    <title>Animal procurado | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="detalhe">
 
     <header class="site-header">
 
@@ -31,7 +32,7 @@
 
             <nav class="main-nav">
 
-                <a href="tela-inicial.html" class="active">INÍCIO</a>
+                <a href="tela-inicial.html">INÍCIO</a>
 
                 <a href="login.html">LOGIN</a>
 
@@ -55,7 +56,7 @@
 
                 </div>
 
-                <a href="quem-somos.html">QUEM SOMOS?</a>
+                <a href="quem-somos.html">QUEM SOMOS</a>
 
             </nav>
 
@@ -68,56 +69,45 @@
     </header>
 
 
-    <container id="formulario-container">
+    <main class="detalhe-page perdido" data-tipo="perdido">
 
-        <!-- NOVO: ÁREA PRINCIPAL DA PÁGINA DE CONTATO -->
-        <div class="animal-contato">
+        <section class="detalhe-container" id="animalDetalhe" aria-live="polite">
 
-            <!-- NOVO: ÁREA DAS INFORMAÇÕES DO ANIMAL -->
-            <div class="animal-contato-informacoes">
+            <div class="detalhe-voltar">
+                <a href="mural-procurados.html">← Voltar ao mural</a>
+            </div>
 
-                <!-- NOVO: NOME E IDADE DO ANIMAL -->
-                <h2>nome do animal, idade</h2>
+            <div class="animal-detalhe">
 
-                <!-- NOVO: CAIXA COM MAIS INFORMAÇÕES -->
-                <div class="animal-contato-texto">
+                <div class="animal-detalhe-imagem">
+                    <img id="animalFoto" src="" alt="Foto do animal">
+                    <div class="animal-miniaturas" id="animalMiniaturas"></div>
+                </div>
 
-                    <p>
-                        mais informações<br>
-                        do animal
-                    </p>
+                <div class="animal-detalhe-informacoes">
+
+                    <span class="pet-status" id="animalStatus"></span>
+
+                    <h2 id="animalTitulo">Carregando…</h2>
+
+                    <div class="animal-detalhe-texto">
+                        <ul id="animalInfo"></ul>
+                        <p id="animalDescricao"></p>
+                    </div>
+
+                    <div class="animal-detalhe-botao">
+                        <a href="#" id="btnContato">EU ENCONTREI</a>
+                    </div>
+
+                    <p class="detalhe-aviso" id="detalheAviso"></p>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <!-- NOVO: IMAGEM DO ANIMAL -->
-            <div class="animal-contato-imagem">
-
-                <img src="Media/cachorro.jpg" alt="Animal encontrado">
-
-            </div>
-
-
-            <!-- NOVO: BOTÃO "ENTRAR EM CONTATO" -->
-            <div class="animal-contato-botao">
-
-                <a href="#">
-                    entrar em contato
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="formulario-enunciado">
-
-        </div>
-
-    </container>
-
+    </main>
 
     <footer class="site-footer">
 
@@ -131,11 +121,11 @@
                     <img src="Media/icon-contato.png"> Contato
                 </a>
 
-                <a href="index.html#quem-somos">
+                <a href="quem-somos.html">
                     <img src="Media/icon-quemsomos.png"> Quem somos?
                 </a>
 
-                <a href="index.html#mural">
+                <a href="tela-inicial.html#mural">
                     <img src="Media/icon-mural.png"> Mural de Pets
                 </a>
 
@@ -149,18 +139,20 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 

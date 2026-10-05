@@ -13,10 +13,11 @@
 
     <title>ESQUECEU-SENHA3 | AchePet 🐾</title>
 
+    <script src="tema.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-page="esqueci3">
 
     <!-- HEADER -->
     <header class="site-header">
@@ -34,7 +35,7 @@
 
                 <a href="tela-inicial.html">INÍCIO</a>
 
-                <a href="login.html"class="active">LOGIN</a>
+                <a href="login.html" class="active">LOGIN</a>
 
 
                 <a href="form1.html">CADASTRAR ANIMAL</a>
@@ -81,16 +82,16 @@
 
                     <div class="cadastro-fields">
 
-                        <input type="password" placeholder="senha">
+                        <input type="password" id="novaSenha" placeholder="nova senha (mínimo 8 caracteres)"
+                            autocomplete="new-password">
 
-                        <input type="password" placeholder="confirmar senha nova">
+                        <input type="password" id="novaSenhaConfirmar" placeholder="confirmar senha nova"
+                            autocomplete="new-password">
 
                     </div>
 
-                    <button class="cadastro-button">
-
-                        <a href="senhatrocada.html">CONFIRMAR SENHA NOVA</a>
-
+                    <button type="button" class="cadastro-button" id="btnNovaSenha">
+                        CONFIRMAR SENHA NOVA
                     </button>
 
                 </div>
@@ -101,9 +102,6 @@
 
         <!-- FAIXA ROSA -->
         <section class="cadastro-pink-section">
-        </section>
-
-
         </section>
 
     </main>
@@ -122,11 +120,11 @@
                     <img src="Media/icon-contato.png"> Contato
                 </a>
 
-                <a href="index.html#quem-somos">
+                <a href="tela-inicial.html#quem-somos">
                     <img src="Media/icon-quemsomos.png"> Quem somos?
                 </a>
 
-                <a href="index.html#mural">
+                <a href="tela-inicial.html#mural">
                     <img src="Media/icon-mural.png"> Mural de Pets
                 </a>
 
@@ -141,19 +139,21 @@
 
         <div class="footer-bottom">
 
-            <p>© 2026 Ache meu pet</p>
+            <p>© 2026 AchePet</p>
 
             <div class="footer-divider"></div>
 
             <p class="footer-message">
                 <span>♡</span>
-                Lorem Ipsum dolor
+                Juntos por eles
             </p>
 
         </div>
 
     </footer>
 
+
+    <script src="script.js"></script>
 
 </body>
 

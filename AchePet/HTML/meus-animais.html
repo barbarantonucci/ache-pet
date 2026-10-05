@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <title>Minha conta | AchePet 🐾</title>
+
+  <script src="tema.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="conta">
+
+  <header class="site-header">
+
+    <div class="header-container">
+
+      <a href="tela-inicial.html" class="logo">
+        <img src="Media/Logo-imagem.png" alt="AchePet">
+        <span>
+          <span class="logo-ache">Ache</span><span class="logo-pet">Pet</span>
+        </span>
+      </a>
+
+      <nav class="main-nav">
+
+        <a href="tela-inicial.html">INÍCIO</a>
+
+        <a href="login.html">LOGIN</a>
+
+        <a href="form1.html">CADASTRAR ANIMAL</a>
+
+        <div class="nav-dropdown">
+
+          <a href="#" class="nav-dropdown-link">MURAL</a>
+
+          <div class="nav-dropdown-menu">
+
+            <a href="mural-procurados.html" class="menu-procurados">
+              Animais Procurados
+            </a>
+
+            <a href="mural-encontrados.html" class="menu-encontrados">
+              Animais Encontrados
+            </a>
+
+          </div>
+
+        </div>
+
+        <a href="quem-somos.html">QUEM SOMOS</a>
+
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main class="conta-page">
+
+    <section class="conta-container">
+
+      <div class="conta-topo">
+        <div>
+          <h1 id="contaTitulo">Minha conta</h1>
+          <p id="contaSubtitulo">Gerencie seus anúncios e veja quem entrou em contato.</p>
+        </div>
+        <a href="form1.html" class="conta-novo">+ CADASTRAR ANIMAL</a>
+      </div>
+
+      <div class="conta-abas" role="tablist">
+        <button type="button" class="conta-aba ativa" data-aba="anuncios" role="tab">Meus anúncios</button>
+        <button type="button" class="conta-aba" data-aba="mensagens" role="tab">
+          Mensagens recebidas <span class="conta-badge" id="badgeMensagens" hidden>0</span>
+        </button>
+      </div>
+
+      <div id="abaAnuncios" class="conta-lista"></div>
+      <div id="abaMensagens" class="conta-lista" hidden></div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="footer-content">
+
+      <img class="footer-logo" src="Media/Logo-com-título-remove.png" alt="AchePet">
+
+      <nav class="footer-links">
+
+        <a href="#">
+          <img src="Media/icon-contato.png"> Contato
+        </a>
+
+        <a href="quem-somos.html">
+          <img src="Media/icon-quemsomos.png"> Quem somos?
+        </a>
+
+        <a href="tela-inicial.html#mural">
+          <img src="Media/icon-mural.png"> Mural de Pets
+        </a>
+
+        <a href="login.html">
+          <img src="Media/icon-entrar.png"> Entrar
+        </a>
+
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>© 2026 AchePet</p>
+
+      <div class="footer-divider"></div>
+
+      <p class="footer-message">
+        <span>♡</span>
+        Juntos por eles
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
