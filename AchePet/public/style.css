@@ -293,14 +293,33 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+     
 
     text-align: center;
+    height: calc(100vh - 69.33px);
+
+    & img {
+        width: 100%;
+        max-width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
+
+
+
+
 
 .hero-content {
     width: 100%;
-    max-width: 650px;
+    max-width: 550px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    z-index: 2;
 }
 
 
@@ -319,7 +338,6 @@ body {
 .hero p {
     max-width: 540px;
 
-    margin: 0 auto 25px;
 
     font-family: var(--fonte-open-sans);
 
@@ -332,10 +350,7 @@ body {
 /* CAIXA DE BUSCA */
 
 .search-box {
-    width: 330px;
-
-    margin: 0 auto;
-
+    width: 100%;
     padding: 10px;
 
     background: var(--azul-principal);
@@ -1602,7 +1617,7 @@ body.pagina-procurados .hero-content,
 body.pagina-encontrados .hero-content {
     max-width: 1100px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 60px;
     text-align: left;
@@ -1631,8 +1646,8 @@ body.pagina-encontrados .hero p {
 /* Busca à direita */
 body.pagina-procurados .search-box,
 body.pagina-encontrados .search-box {
+    width: 620px;
     flex-shrink: 0;
-    width: 340px;
 }
 
 /* =========================================================
@@ -4200,4 +4215,8 @@ html[data-tema="escuro"] .logo:hover {
 html[data-tema="escuro"] .pet-card img,
 html[data-tema="escuro"] .animal-detalhe-imagem img {
     filter: brightness(0.92);
+}
+
+.hero-texto {
+    align-items: left;
 }
