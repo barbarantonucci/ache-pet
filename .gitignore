@@ -1,0 +1,16 @@
+# Segredos
+.env
+AchePet/db/.secret
+
+# Banco SQLite
+AchePet/db/achepet.db
+AchePet/db/achepet.db-shm
+AchePet/db/achepet.db-wal
+
+# Dependências
+node_modules/
+
+# Arquivos do sistema/editor
+.DS_Store
+Thumbs.db
+.vscode/
