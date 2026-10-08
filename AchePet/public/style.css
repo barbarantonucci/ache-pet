@@ -17,6 +17,8 @@
     --fonte-merriweather: 'Merriweather', serif;
     --fonte-dancing: 'Dancing Script', cursive;
     --fonte-open-sans: 'Open Sans', sans-serif;
+    @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
     /* CORES DE TEXTO */
     --texto-principal: var(--preto);
@@ -289,7 +291,8 @@ body {
 
     padding: 65px 20px;
 
-    background: var(--fundo-azul);
+    background: url(Media/hero-mural-encontrados.png);
+    background-position: bottom;
 
     display: flex;
     align-items: center;
@@ -298,13 +301,8 @@ body {
     text-align: center;
     height: calc(100vh - 69.33px);
 
-    & img {
-        width: 100%;
-        max-width: 500px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-    }
+
+    
 }
 
 
@@ -313,7 +311,7 @@ body {
 
 .hero-content {
     width: 100%;
-    max-width: 550px;
+    max-width: 650px;
    
     display: flex;
     flex-direction: column;
@@ -327,9 +325,11 @@ body {
 
 .hero h1 {
     margin-bottom: 10px;
-
-    font-size: 48px;
-    font-weight: 500;
+    font-size: 52px;
+    color:#0f286d;
+    font-weight: 800;
+    text-align: center;
+    font-family: 'Baloo 2', sans-serif;
 }
 
 
@@ -1655,11 +1655,21 @@ body.pagina-encontrados .search-box {
    ========================================================= */
 
 body.pagina-procurados .hero {
-    background: #FDE4EF;
+    background-image: url(Media/hero-mural-procurado.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body.pagina-procurados .hero h1 {
     color: #E9166B;
+    font-size: 80px;
+    font-weight: 800;
+    width: 20px;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    transform: rotate(-3deg);
+
 }
 
 /* =========================================================
@@ -1667,11 +1677,20 @@ body.pagina-procurados .hero h1 {
    ========================================================= */
 
 body.pagina-encontrados .hero {
-    background: #DFF2FD;
+    background-image: url(Media/Hero-mural-encontrado.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 body.pagina-encontrados .hero h1 {
-    color: #1489D8;
+    color: var(--azul-escuro);
+    font-size: 80px;
+    font-weight: 700;
+    width: 20px;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    transform: rotate(-3deg);
 }
 
 
@@ -4218,6 +4237,19 @@ html[data-tema="escuro"] .animal-detalhe-imagem img {
 }
 
 .hero-texto {
-    align-items: left;
+    align-items: center;
+    margin-left: 90px;
 }
 
+
+#cachorro {
+        width: 100%;
+        max-width: 500px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+#coracao {
+    width: 60px;
+}
